@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aftercare 360</title>
+<meta name="description" content="Aftercare 360 is developing consent-led connected recovery infrastructure that links mental-health and substance-use services, keeps recovery progress visible and supports continuity beyond treatment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5v.01"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="14" r="4"/><path d="M11 11l8-8M16 6l3 3M14 8l2 2"/></symbol>
+    <symbol id="i-inputs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h7M3 12h7M3 18h7"/><path d="M14 12h7M17 9l3 3-3 3"/><path d="M10 6c2 0 2 6 4 6M10 18c2 0 2-6 4-6"/></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 3 8-9"/><path d="M15 6h5v5"/></symbol>
+    <symbol id="i-views" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1.5"/><rect x="14" y="4" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/></symbol>
+    <symbol id="i-hands" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="2.6"/><circle cx="17" cy="7" r="2.6"/><path d="M2.5 19c.6-3.4 2.4-5.5 4.5-5.5s3 1 5 3c2-2 2.9-3 5-3s3.9 2.1 4.5 5.5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 018 0v3"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16l-6 7.5V19l-4 1.5v-8z"/></symbol>
+    <symbol id="i-role" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.8-3 2.8-4.6 5.5-4.6 1.3 0 2.4.3 3.3 1"/><rect x="14" y="13" width="7" height="7" rx="1.5"/><path d="M15.8 13v-1.5a1.7 1.7 0 013.4 0V13"/></symbol>
+    <symbol id="i-audit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v6c0 4.4-3.1 7.8-7.5 9-4.4-1.2-7.5-4.6-7.5-9V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-human" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6.5" r="3"/><path d="M6 21v-4.5a6 6 0 0112 0V21"/><path d="M12 13v4"/></symbol>
+    <symbol id="i-standard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.5L7 21l5-2.5 5 2.5-1.5-7.5"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Aftercare 360, back to top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 16a11 11 0 0 1 11-11" fill="none" stroke="var(--mh)" stroke-width="3" stroke-linecap="round"/><path d="M27 16a11 11 0 0 1-11 11" fill="none" stroke="var(--su)" stroke-width="3" stroke-linecap="round"/><path d="M16 5a11 11 0 0 1 11 11M16 27A11 11 0 0 1 5 16" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"/><circle cx="16" cy="16" r="3.2" fill="var(--teal)"/></svg>
+      <span>Aftercare<span class="n">360</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#home" data-nav="home">Home</a></li>
+        <li><a href="#challenge" data-nav="challenge">The Challenge</a></li>
+        <li><a href="#platform" data-nav="platform">Our Platform</a></li>
+        <li><a href="#how" data-nav="how">How It Works</a></li>
+        <li><a href="#innovation" data-nav="innovation">Innovation</a></li>
+        <li><a href="#trust" data-nav="trust">Trust &amp; Safety</a></li>
+        <li><a href="#roadmap" data-nav="roadmap">Roadmap</a></li>
+        <li><a href="#founder" data-nav="founder">About the Founder</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#contact">Discuss a Partnership</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <svg><use href="#i-menu"/></svg>
+    </button>
+  </div>
+  <div class="mobile-panel" id="mobileMenu" hidden>
+    <div class="wrap">
+      <ul>
+        <li><a href="#home" data-nav="home">Home</a></li>
+        <li><a href="#challenge" data-nav="challenge">The Challenge</a></li>
+        <li><a href="#platform" data-nav="platform">Our Platform</a></li>
+        <li><a href="#how" data-nav="how">How It Works</a></li>
+        <li><a href="#innovation" data-nav="innovation">Innovation</a></li>
+        <li><a href="#trust" data-nav="trust">Trust &amp; Safety</a></li>
+        <li><a href="#roadmap" data-nav="roadmap">Roadmap</a></li>
+        <li><a href="#founder" data-nav="founder">About the Founder</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
+        <li><a class="btn btn-primary" href="#contact">Discuss a Partnership</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="home" aria-labelledby="hero-h">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Connected recovery infrastructure · UK digital health</div>
+      <h1 id="hero-h">Recovery continuity, connected across services.</h1>
+      <p class="lede">Aftercare 360 is developing a consent-led digital platform that links mental-health and substance-use services, keeps recovery progress visible between appointments, and stays useful after someone leaves treatment.</p>
+      <p class="muted">Designed for local-authority commissioners, NHS and ICB teams, and treatment providers, with the person in recovery in control of what is shared.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#platform">Explore the Platform <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#contact">Discuss a Partnership</a>
+      </div>
+      <div class="hero-meta">
+        <span><b>Stage</b> Early-stage venture, pre-pilot</span>
+        <span><b>First area</b> Birmingham (planned)</span>
+        <span><b>Model</b> Commissioner-funded software</span>
+      </div>
+    </div>
+
+    <figure class="hero-fig" aria-labelledby="hero-cap">
+      <svg viewBox="0 0 600 440" role="img" aria-labelledby="hero-svg-t hero-svg-d">
+        <title id="hero-svg-t">Two service pathways joined by a consented recovery record</title>
+        <desc id="hero-svg-d">A mental-health pathway and a drug and alcohol pathway each run through assessment, treatment and discharge. Today the lines break after discharge. A consented recovery record controlled by the person links both pathways and continues as a recovery signal beyond discharge.</desc>
+        <!-- Track labels -->
+        <text x="130" y="22" class="svg-mono">MENTAL-HEALTH SERVICES · NHS</text>
+        <text x="130" y="434" class="svg-mono">DRUG &amp; ALCOHOL SERVICES · LOCAL AUTHORITY</text>
+        <!-- Top track -->
+        <path d="M130 70 H410" stroke="var(--mh)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M410 70 H570" stroke="var(--mh)" stroke-width="3" fill="none" stroke-dasharray="3 9" stroke-linecap="round" opacity=".45"/>
+        <!-- Bottom track -->
+        <path d="M130 380 H410" stroke="var(--su)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M410 380 H570" stroke="var(--su)" stroke-width="3" fill="none" stroke-dasharray="3 9" stroke-linecap="round" opacity=".45"/>
+        <text x="572" y="52" text-anchor="end" class="svg-label">visibility often lost</text>
+        <text x="572" y="408" text-anchor="end" class="svg-label">visibility often lost</text>
+        <!-- connectors to record -->
+        <g fill="none" stroke="var(--teal)" stroke-width="2" opacity=".85">
+          <path d="M170 70 C170 140 210 150 220 194"/>
+          <path d="M290 70 V194"/>
+          <path d="M410 70 C410 140 370 150 360 194"/>
+          <path d="M170 380 C170 310 210 300 220 246"/>
+          <path d="M290 380 V246"/>
+          <path d="M410 380 C410 310 370 300 360 246"/>
+        </g>
+        <!-- stations top -->
+        <g>
+          <circle cx="170" cy="70" r="9" fill="var(--surface)" stroke="var(--mh)" stroke-width="3"/>
+          <circle cx="290" cy="70" r="9" fill="var(--surface)" stroke="var(--mh)" stroke-width="3"/>
+          <circle cx="410" cy="70" r="9" fill="var(--surface)" stroke="var(--mh)" stroke-width="3"/>
+          <circle cx="170" cy="380" r="9" fill="var(--surface)" stroke="var(--su)" stroke-width="3"/>
+          <circle cx="290" cy="380" r="9" fill="var(--surface)" stroke="var(--su)" stroke-width="3"/>
+          <circle cx="410" cy="380" r="9" fill="var(--surface)" stroke="var(--su)" stroke-width="3"/>
+        </g>
+        <g class="svg-label" text-anchor="middle">
+          <text x="170" y="52">Assessment</text><text x="290" y="52">Treatment</text><text x="410" y="52">Discharge</text>
+          <text x="170" y="408">Assessment</text><text x="290" y="408">Treatment</text><text x="410" y="408">Discharge</text>
+        </g>
+        <!-- person -->
+        <g>
+          <line x1="88" y1="220" x2="160" y2="220" stroke="var(--teal)" stroke-width="2"/>
+          <circle cx="62" cy="220" r="27" fill="var(--mint)" stroke="var(--teal)" stroke-width="2"/>
+          <circle cx="62" cy="212" r="7" fill="none" stroke="var(--mint-ink)" stroke-width="2.2"/>
+          <path d="M49 236c3-7 8-10 13-10s10 3 13 10" fill="none" stroke="var(--mint-ink)" stroke-width="2.2" stroke-linecap="round"/>
+          <text x="62" y="268" text-anchor="middle" class="svg-label-strong">Person</text>
+          <text x="62" y="284" text-anchor="middle" class="svg-label">sets consent</text>
+        </g>
+        <!-- record band -->
+        <rect x="160" y="194" width="260" height="52" rx="26" fill="var(--teal)"/>
+        <text x="290" y="216" text-anchor="middle" style="font:600 14px var(--f-body);fill:#fff">Consented recovery record</text>
+        <text x="290" y="234" text-anchor="middle" style="font:500 10.5px var(--f-mono);letter-spacing:.06em;fill:#fff;opacity:.85">DDRCI · GOALS · HANDOVERS</text>
+        <!-- continuity line -->
+        <path d="M420 220 H585" stroke="var(--teal)" stroke-width="3" fill="none" class="flow" stroke-linecap="round"/>
+        <path d="M430 206 C450 196 462 212 482 200 S514 190 530 198 S560 186 582 192" stroke="var(--teal-strong)" stroke-width="1.6" fill="none" opacity=".8"/>
+        <text x="502" y="262" text-anchor="middle" class="svg-label-strong">Continues after</text>
+        <text x="502" y="278" text-anchor="middle" class="svg-label-strong">discharge</text>
+      </svg>
+      <figcaption id="hero-cap"><span>Concept diagram: two service pathways joined by a person-controlled record.</span><span class="mono">ILLUSTRATIVE</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- CHALLENGE -->
+<section class="section alt" id="challenge" aria-labelledby="ch-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The challenge</div>
+      <h2 id="ch-h">Two systems, one person.</h2>
+      <p class="lede">For most adults in drug and alcohol treatment in England, mental-health needs are part of the picture. Yet mental-health care and substance-use treatment are funded, delivered and measured as separate systems.</p>
+    </div>
+
+    <div class="problems">
+      <article class="problem">
+        <span class="num">PROBLEM 1</span>
+        <svg viewBox="0 0 300 64" aria-hidden="true"><path d="M8 20H130" stroke="var(--mh)" stroke-width="3" stroke-linecap="round"/><path d="M170 20H292" stroke="var(--mh)" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8"/><path d="M8 44H130" stroke="var(--su)" stroke-width="3" stroke-linecap="round"/><path d="M170 44H292" stroke="var(--su)" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8"/><circle cx="150" cy="32" r="5" fill="none" stroke="var(--muted)" stroke-width="2"/></svg>
+        <h3>Fragmented services</h3>
+        <p>Mental-health care is mostly delivered through the NHS. Drug and alcohol treatment is commissioned by local-authority public health and usually delivered by third-sector providers. Records and assessments rarely travel between them, so people repeat their story at each hand-off. National guidance has called for joined-up care for co-occurring conditions <a href="https://assets.publishing.service.gov.uk/media/5a75b781ed915d6faf2b5276/Co-occurring_mental_health_and_alcohol_drug_use_conditions.pdf" target="_blank" rel="noopener noreferrer">since at least 2017</a>.</p>
+      </article>
+      <article class="problem">
+        <span class="num">PROBLEM 2</span>
+        <svg viewBox="0 0 300 64" aria-hidden="true"><path d="M8 52H292" stroke="var(--line-strong)" stroke-width="1.5"/><circle cx="30" cy="30" r="6" fill="var(--teal)"/><circle cx="150" cy="22" r="6" fill="var(--teal)"/><circle cx="270" cy="34" r="6" fill="var(--teal)"/><path d="M40 30H140M160 22H260" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="3 6"/><text x="90" y="18" text-anchor="middle" class="svg-mono">?</text><text x="210" y="16" text-anchor="middle" class="svg-mono">?</text></svg>
+        <h3>Recovery measured periodically</h3>
+        <p>Recovery capital, the personal, social and community resources that sustain recovery, is usually captured by questionnaire at entry, review and exit. Between those points, change is hard to see until it shows up as a crisis or a return to treatment.</p>
+      </article>
+      <article class="problem">
+        <span class="num">PROBLEM 3</span>
+        <svg viewBox="0 0 300 64" aria-hidden="true"><path d="M8 32H170" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"/><circle cx="170" cy="32" r="7" fill="var(--surface)" stroke="var(--teal)" stroke-width="3"/><path d="M184 32H292" stroke="var(--teal)" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10" opacity=".4"/><text x="170" y="60" text-anchor="middle" class="svg-mono">DISCHARGE</text></svg>
+        <h3>Loss of visibility after discharge</h3>
+        <p>Contact and measurement usually end when treatment ends. Once someone leaves a service, whether through a planned completion or not, it becomes much harder for anyone to see how they are doing or to offer support early.</p>
+      </article>
+    </div>
+
+    <div class="data-panel">
+      <div class="data-big">
+        <span class="eyebrow">England · 2024 to 2025</span>
+        <span class="fig tnum">329,646</span>
+        <p>adults in contact with drug and alcohol treatment services in England during 2024 to 2025.</p>
+        <p class="src">Source: <a href="https://www.gov.uk/government/statistics/substance-misuse-treatment-for-adults-statistics-2024-to-2025/adult-substance-misuse-treatment-statistics-2024-to-2025-report" target="_blank" rel="noopener noreferrer">OHID, Adult substance misuse treatment statistics 2024 to 2025</a></p>
+      </div>
+      <div class="bars">
+        <div class="bar-row">
+          <div class="top"><span>Adults starting treatment who reported a mental-health treatment need</span><b class="tnum">74%</b></div>
+          <div class="bar-track" role="img" aria-label="74 percent"><div class="bar-fill mh" style="width:74%"></div></div>
+          <span class="src">124,763 people. Denominator: new treatment starters, 2024 to 2025.</span>
+        </div>
+        <div class="bar-row">
+          <div class="top"><span>Of those starters with a mental-health need, the share receiving no mental-health treatment</span><b class="tnum">22%</b></div>
+          <div class="bar-track" role="img" aria-label="22 percent"><div class="bar-fill su" style="width:22%"></div></div>
+          <span class="src">Denominator: starters reporting a mental-health treatment need.</span>
+        </div>
+        <div class="bar-row">
+          <div class="top"><span>Adults leaving treatment whose exit was recorded as “treatment completed”</span><b class="tnum">46%</b></div>
+          <div class="bar-track" role="img" aria-label="46 percent"><div class="bar-fill" style="width:46%"></div></div>
+          <span class="src">Denominator: adults leaving treatment, 2024 to 2025. Most exits are not planned completions.</span>
+        </div>
+        <p class="src">All figures: Office for Health Improvement and Disparities (OHID), national statistics for England. They describe the treatment system, not Aftercare 360, and say nothing about the effect of the proposed product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="section" id="platform" aria-labelledby="pl-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Our platform</div>
+      <h2 id="pl-h">A shared, consented layer across the service boundary.</h2>
+      <p class="lede">Aftercare 360 is proposed as connected recovery infrastructure: one recovery picture that both sides of the boundary can see, with the person deciding what is shared, and a recovery measure that keeps working between appointments and after discharge.</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <span class="k">Pillar 1</span>
+        <h3>One consented recovery record</h3>
+        <p>A connected view of a person's recovery journey across the services they use, governed by their permissions and by information-governance agreements between organisations.</p>
+        <p class="resp">Responds to: fragmented services</p>
+      </div>
+      <div class="pillar">
+        <span class="k">Pillar 2</span>
+        <h3>Continuous recovery-capital measurement</h3>
+        <p>The <span class="tip"><button type="button" class="tip-btn" aria-describedby="tip-ddrci" data-tip>DDRCI</button><span class="tip-pop" role="tooltip" id="tip-ddrci" hidden>Dynamic Digital Recovery Capital Index: a proposed measure that updates recovery capital from short check-ins, service events and practitioner contacts, instead of only at scheduled reviews.</span></span> uses short check-ins, service events and practitioner contacts to track change over time.</p>
+        <p class="resp">Responds to: periodic measurement</p>
+      </div>
+      <div class="pillar">
+        <span class="k">Pillar 3</span>
+        <h3>Continuity beyond discharge</h3>
+        <p>The person keeps their recovery picture and support connections after treatment ends. If their signal declines, an authorised practitioner is prompted to consider contact.</p>
+        <p class="resp">Responds to: lost visibility after discharge</p>
+      </div>
+      <div class="pillar">
+        <span class="k">Pillar 4</span>
+        <h3>Cross-service outcomes visibility</h3>
+        <p>Commissioners see aggregated, cohort-level measures of recovery-capital change, engagement after discharge and coordination between services.</p>
+        <p class="resp">Responds to: outcomes held in single-service returns</p>
+      </div>
+    </div>
+
+    <div class="complement">
+      <svg aria-hidden="true"><use href="#i-link"/></svg>
+      <p><b>Designed to complement, not replace.</b> Aftercare 360 is intended to connect to existing NHS, local-authority and provider systems. It is not a clinical record, a case-management system or a treatment intervention in its own right.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT VIEWS -->
+<section class="section alt" id="views" aria-labelledby="vw-h">
+  <div class="wrap">
+    <div class="views-top">
+      <div class="sec-head" style="margin-bottom:0">
+        <div class="eyebrow">Three views, one platform</div>
+        <h2 id="vw-h">Each person sees what their role needs.</h2>
+      </div>
+      <div class="tablist" role="tablist" aria-label="Platform views">
+        <button class="tab" role="tab" id="tab-person" aria-controls="panel-person" aria-selected="true"><span class="dot"></span>Person in recovery</button>
+        <button class="tab" role="tab" id="tab-prac" aria-controls="panel-prac" aria-selected="false" tabindex="-1"><span class="dot"></span>Practitioner</button>
+        <button class="tab" role="tab" id="tab-comm" aria-controls="panel-comm" aria-selected="false" tabindex="-1"><span class="dot"></span>Commissioner / ICB</button>
+      </div>
+    </div>
+
+    <!-- Person -->
+    <div class="view" role="tabpanel" id="panel-person" aria-labelledby="tab-person" tabindex="0">
+      <div class="view-copy">
+        <h3>Keep hold of your own progress</h3>
+        <p>For the person in recovery, Aftercare 360 is intended to be quick, private and useful to them first. It is always free to use, and nothing is shared without their say.</p>
+        <ul class="feat">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Simple check-ins.</b> A few taps, about a minute a week, on a phone.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Personal goals.</b> Goals they set, with progress they can see.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Recovery-capital trend.</b> Strengths shown across personal, social, community and cultural domains.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Granular consent.</b> Choose which service sees what, change it at any time, and see who has looked.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Support contacts.</b> Named contacts and relevant local resources, kept after discharge.</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="mock">
+          <div class="mock-bar"><span class="dots"><i></i><i></i><i></i></span><span>Person view · mobile</span><span class="chip illus">Concept</span></div>
+          <div class="mock-body phone-wrap">
+            <div class="phone">
+              <div class="progress" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+              <span class="mono small muted">WEEKLY CHECK-IN · 2 OF 4</span>
+              <h5>This week, how connected have you felt to people who support your recovery?</h5>
+              <div class="scale" role="group" aria-label="Answer from 1, not at all, to 5, very connected">
+                <button type="button" aria-pressed="false">1</button><button type="button" aria-pressed="false">2</button><button type="button" aria-pressed="true">3</button><button type="button" aria-pressed="false">4</button><button type="button" aria-pressed="false">5</button>
+              </div>
+              <div class="small muted" style="display:flex;justify-content:space-between"><span>Not at all</span><span>Very</span></div>
+              <p class="small" id="ciMsg" aria-live="polite">Answer saved. Two questions left.</p>
+              <div style="border-top:1px solid var(--line);padding-top:12px;display:grid;gap:8px">
+                <h5>My goal</h5>
+                <div class="small">Join a local walking group</div>
+                <div class="progress" aria-label="Goal progress 3 of 5 steps"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+              </div>
+              <div class="contact-card"><span class="avatar">AW</span><span><b style="color:var(--ink)">Aftercare worker</b><br><span class="muted">Named contact · stays after discharge</span></span></div>
+            </div>
+            <div class="phone">
+              <span class="mono small muted">MY RECOVERY STRENGTHS</span>
+              <div class="domain"><span>Personal</span><span class="t"><i style="width:68%"></i></span><span class="mono tnum">68</span></div>
+              <div class="domain"><span>Social</span><span class="t"><i style="width:55%"></i></span><span class="mono tnum">55</span></div>
+              <div class="domain"><span>Community</span><span class="t"><i style="width:42%"></i></span><span class="mono tnum">42</span></div>
+              <div class="domain"><span>Cultural</span><span class="t"><i style="width:60%"></i></span><span class="mono tnum">60</span></div>
+              <svg viewBox="0 0 220 54" aria-label="Twelve-week trend rising gently" role="img" style="width:100%;height:auto"><path d="M4 42 L22 40 L40 41 L58 36 L76 37 L94 33 L112 34 L130 29 L148 27 L166 28 L184 22 L202 19" fill="none" stroke="var(--teal)" stroke-width="2.2" stroke-linejoin="round"/><circle cx="202" cy="19" r="3.5" fill="var(--teal)"/><text x="4" y="53" class="svg-mono" style="font-size:9px">12 WEEKS</text></svg>
+              <div style="border-top:1px solid var(--line);padding-top:10px">
+                <h5 style="margin-bottom:4px">Who can see my check-in trend</h5>
+                <div class="toggle-row"><span>Mental-health team</span><button type="button" class="switch" role="switch" aria-checked="true" data-who="Mental-health team" aria-label="Mental-health team can see my trend"></button></div>
+                <div class="toggle-row"><span>Drug &amp; alcohol service</span><button type="button" class="switch" role="switch" aria-checked="true" data-who="Drug & alcohol service" aria-label="Drug and alcohol service can see my trend"></button></div>
+                <div class="toggle-row"><span>Peer worker</span><button type="button" class="switch" role="switch" aria-checked="false" data-who="Peer worker" aria-label="Peer worker can see my trend"></button></div>
+              </div>
+              <div class="receipt" id="receipt" aria-live="polite">Consent receipt · no changes this session</div>
+            </div>
+          </div>
+        </div>
+        <p class="illus-note"><svg aria-hidden="true"><use href="#i-info"/></svg>Illustrative concept with fictional data. Not a live product or a real person's information.</p>
+      </div>
+    </div>
+
+    <!-- Practitioner -->
+    <div class="view" role="tabpanel" id="panel-prac" aria-labelledby="tab-prac" tabindex="0" hidden>
+      <div class="view-copy">
+        <h3>See the whole person, act earlier</h3>
+        <p>For practitioners on either side of the boundary, the aim is a shared, authorised view that saves duplicate entry and makes transitions trackable. Prompts support professional judgement; they never replace it.</p>
+        <ul class="feat">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Shared caseload visibility</b> across authorised services, within the person's consent.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Recovery-capital trends and prompts</b> with plain-English reasons attached.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Referral and contact logging</b> in a couple of taps.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Structured handover summaries</b> so people do not have to retell their story.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Follow-up and step-down support</b>, with tiers proposed by rules and approved by the practitioner.</span></li>
+        </ul>
+        <p class="small muted">Select a row in the caseload to see the detail panel change.</p>
+      </div>
+      <div>
+        <div class="mock">
+          <div class="mock-bar"><span class="dots"><i></i><i></i><i></i></span><span>Practitioner workspace · shared caseload</span><span class="chip illus">Concept</span></div>
+          <div class="mock-body">
+            <div class="table-wrap">
+              <table class="case" aria-label="Illustrative caseload">
+                <thead><tr><th scope="col">Person</th><th scope="col">Services</th><th scope="col">DDRCI · 4 wk</th><th scope="col">Engagement</th><th scope="col">Stage</th></tr></thead>
+                <tbody id="caseRows"></tbody>
+              </table>
+            </div>
+            <div class="detail" id="caseDetail" aria-live="polite"></div>
+          </div>
+        </div>
+        <p class="illus-note"><svg aria-hidden="true"><use href="#i-info"/></svg>Pseudonymous, fictional records for illustration. Not a live deployment.</p>
+      </div>
+    </div>
+
+    <!-- Commissioner -->
+    <div class="view" role="tabpanel" id="panel-comm" aria-labelledby="tab-comm" tabindex="0" hidden>
+      <div class="view-copy">
+        <h3>Evidence value across services</h3>
+        <p>For commissioners and ICBs, the intended output is aggregated cohort information that national single-service returns do not provide: how recovery capital changes, whether people stay connected after discharge, and how well services hand over.</p>
+        <ul class="feat">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Cohort-level progress</b> in recovery capital, never individual records.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Post-discharge engagement</b> measures over time.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Cross-service coordination</b>, such as handover timeliness.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Exportable outcome reports</b> for contract and re-commissioning reviews.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Change against agreed baselines</b>, set from each area's own data at go-live.</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="mock">
+          <div class="mock-bar"><span class="dots"><i></i><i></i><i></i></span><span>Commissioner dashboard · example area</span><span class="chip illus">Concept</span></div>
+          <div class="mock-body">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+              <span class="small muted">Cohort: example area · aggregated, no individual data</span>
+              <div class="seg" role="group" aria-label="Cohort filter">
+                <button type="button" aria-pressed="true" data-cohort="all">All</button>
+                <button type="button" aria-pressed="false" data-cohort="co">Co-occurring</button>
+                <button type="button" aria-pressed="false" data-cohort="post">Post-discharge</button>
+              </div>
+            </div>
+            <div class="kpis" id="kpis"></div>
+            <div class="chart-box">
+              <div class="hd"><span id="chartTitle">Engaged 12 weeks after discharge, by month</span><span class="legend"><span><i style="background:var(--teal)"></i>Cohort</span><span><i style="background:var(--muted);height:2px;vertical-align:3px"></i>Baseline</span></span></div>
+              <svg id="commChart" viewBox="0 0 520 190" role="img" aria-label="Illustrative monthly bar chart against a baseline"></svg>
+            </div>
+            <div class="exports"><span>Report formats planned:</span><span class="fmt">CSV</span><span class="fmt">PDF</span><span class="fmt">National dataset mapping</span></div>
+          </div>
+        </div>
+        <p class="illus-note"><svg aria-hidden="true"><use href="#i-info"/></svg>Every figure in this dashboard is invented for illustration. None are results, targets met or pilot data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How it works</div>
+      <h2 id="how-h">From consent to human follow-up, in five stages.</h2>
+      <p class="lede">The sequence below shows how information is intended to move through the platform. Select a stage for more detail.</p>
+    </div>
+
+    <div class="journey" role="tablist" aria-label="Journey stages" id="journey"></div>
+    <div class="step-detail" id="stepDetail" role="tabpanel" aria-live="polite" tabindex="0"></div>
+
+    <div class="ddrci" id="ddrci">
+      <div class="ddrci-copy">
+        <div class="eyebrow">The core measure</div>
+        <h3 style="font-size:clamp(1.5rem,2.6vw,1.95rem)">Dynamic Digital Recovery Capital Index (DDRCI)</h3>
+        <p><b>Recovery capital</b> describes the personal, social, community and cultural resources a person can draw on to sustain recovery. It is a well-established idea in UK and international research, and validated questionnaires exist to measure it.</p>
+        <p>The DDRCI is proposed as a way to turn that periodic score into a continuously updated signal, anchored to an established brief instrument and refreshed by short check-ins and service events between reviews.</p>
+        <details class="more">
+          <summary>How the index is intended to work</summary>
+          <ol>
+            <li><b>Anchor.</b> A validated brief recovery-capital instrument at baseline and periodically calibrates each person's score.</li>
+            <li><b>Micro check-ins.</b> Three to five rotating questions, about a minute a week, mapped to four domains.</li>
+            <li><b>Event signals.</b> Attended or missed appointments, referrals, and housing or employment changes recorded by services.</li>
+            <li><b>Fusion.</b> A statistical model updates a score per domain, with a total, a rate of change, and a confidence band that widens when data are sparse.</li>
+            <li><b>Outputs.</b> A strengths view for the person, a prompt to the practitioner when change crosses an agreed threshold, and anonymised trends for commissioners.</li>
+          </ol>
+          <p class="small muted" style="padding-bottom:10px">Validation against established recovery-capital measures is planned in Phase 1. The index has not yet been built or validated.</p>
+        </details>
+        <div class="not-box">
+          <h4>What the DDRCI is not</h4>
+          <ul>
+            <li>It does not diagnose any condition.</li>
+            <li>It does not predict an individual's clinical risk.</li>
+            <li>It does not make decisions. Prompts go to a person, who decides.</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="ddrci-chart" style="margin:0">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px">
+          <span class="small" style="font-weight:600;color:var(--ink)">Point-in-time scores versus a continuous signal</span>
+          <span class="chip illus">Illustrative only</span>
+        </div>
+        <svg id="ddrciChart" viewBox="0 0 560 290" role="img" aria-labelledby="dd-t dd-d"><title id="dd-t">Illustrative comparison of periodic and continuous recovery-capital measurement</title><desc id="dd-d">Three periodic scores at entry, review and exit miss a dip between reviews and say nothing after discharge. A continuous line shows the dip as it happens and continues after discharge with a wider confidence band.</desc></svg>
+        <figcaption class="small muted" style="margin-top:8px">A hypothetical person over twelve months. Not modelled, trial or pilot data.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- INNOVATION -->
+<section class="section alt" id="innovation" aria-labelledby="in-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Innovation</div>
+      <h2 id="in-h">The change is in what is measured, when, and across which boundary.</h2>
+      <p class="lede">Aftercare 360 is not proposed as another recovery app. Its distinctive elements sit in measurement, workflow and governance. All five core innovations are at concept stage; their value still has to be shown in practice.</p>
+    </div>
+    <div class="inno-grid" id="innoGrid"></div>
+
+    <div class="future" aria-labelledby="fu-h">
+      <div class="sec-head" style="margin-bottom:28px">
+        <div class="eyebrow">Longer-term opportunities</div>
+        <h3 id="fu-h" style="font-size:clamp(1.4rem,2.4vw,1.8rem)">Planned extensions, each subject to evidence from earlier phases.</h3>
+      </div>
+      <div class="future-grid">
+        <div class="fut"><span class="chip planned">Planned · Phase 2</span><h4>Community recovery assets</h4><p>Map local mutual-aid groups, housing, employment, education, faith and cultural organisations, and match them to a person's weakest recovery-capital domain, with a warm introduction from a peer worker.</p></div>
+        <div class="fut"><span class="chip planned">Planned · Phase 2</span><h4>Peer recovery coordination</h4><p>Give peer workers with lived experience a task queue from reach-out prompts and linkage matches, and involve lived-experience panels in designing check-in questions.</p></div>
+        <div class="fut"><span class="chip planned">Planned · Phase 2 to 3</span><h4>Family and carer involvement</h4><p>Let the person nominate supporters and choose exactly what they can see, such as “check-in missed” but never clinical detail, with guidance for supporters.</p></div>
+        <div class="fut"><span class="chip planned">Planned · Phase 2</span><h4>Cross-service value measurement</h4><p>Report cohort trajectories, handover timeliness and post-discharge engagement against each area's own baseline, mapped to national dataset fields to avoid double entry.</p></div>
+        <div class="fut"><span class="chip gated">Subject to validation · Phase 3</span><h4>Recovery data trust</h4><p>Consented, de-identified data held in a trusted research environment that approved researchers can apply to use, with outputs checked before release.</p></div>
+        <div class="fut"><span class="chip gated">Gated · Phase 3</span><h4>Explainable early warning</h4><p>Research only until multi-area validation, bias audit, an MHRA classification decision and a clinical-safety case are complete. A practitioner would always see the reasons and make the decision.</p></div>
+      </div>
+    </div>
+
+    <div class="compare" aria-labelledby="cmp-h">
+      <div class="sec-head" style="margin-bottom:24px">
+        <div class="eyebrow">Where it fits</div>
+        <h3 id="cmp-h" style="font-size:clamp(1.4rem,2.4vw,1.8rem)">Infrastructure alongside existing tools, not a rival to them.</h3>
+        <p class="muted">A desk review in the founder's 2026 research did not identify a UK product that combines continuous recovery-capital measurement with a shared record across mental-health and substance-use services. Several of these tools could connect to Aftercare 360 as support resources.</p>
+      </div>
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead><tr><th scope="col">Category (examples from the review)</th><th scope="col">What it offers</th><th scope="col">Continuous after discharge</th><th scope="col">Spans mental health and substance use</th></tr></thead>
+          <tbody>
+            <tr><td>Recovery-capital assessment tools<br><span class="small muted">e.g. REC-CAP / ARMS</span></td><td>Validated periodic assessment with recovery planning</td><td class="no">No, periodic</td><td class="no">No</td></tr>
+            <tr><td>Digital behaviour-change programmes<br><span class="small muted">e.g. Breaking Free Online</span></td><td>Self-guided programme offered through UK treatment services</td><td class="p">Partly</td><td class="no">No, an intervention rather than a shared record</td></tr>
+            <tr><td>Recovery-capital dashboards (US)<br><span class="small muted">e.g. Recovery Capital Index, RecoveryLink</span></td><td>Recovery-capital tracking for US recovery organisations</td><td class="p">Partly</td><td class="no">No</td></tr>
+            <tr><td>Recovery-support apps (US)<br><span class="small muted">e.g. CHESS Health Connections</span></td><td>Recovery support used by US providers and state programmes</td><td class="y">Yes</td><td class="no">No, substance-use focus</td></tr>
+            <tr><td>Case-management systems and shared care records</td><td>Clinical and case records within one organisation or care system</td><td class="no">No</td><td class="p">Limited</td></tr>
+            <tr><td>General mental-health apps<br><span class="small muted">e.g. Kooth, Wysa</span></td><td>Digital mental-health support, some NHS-commissioned</td><td class="p">Varies</td><td class="no">No, mental-health focus</td></tr>
+            <tr class="us"><td>Aftercare 360 (proposed)</td><td>Consented cross-service record, continuous recovery-capital signal, commissioner outcomes</td><td>Designed for this</td><td>Designed for this</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="src" style="margin-top:10px">Summary of the comparison in the founder's research, drawing on <a href="https://corxconsortium.org/wp-content/uploads/Recovery-Capital-Platforms-Summary-with-Glossary.pdf" target="_blank" rel="noopener noreferrer">a 2023 review of recovery-capital platforms</a> and public product information. It reflects that review only and may not capture every product's current capabilities.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section band" id="trust" aria-labelledby="tr-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Trust, privacy and safety</div>
+      <h2 id="tr-h">Accountability built into the design from the start.</h2>
+      <p class="lede">Mental-health and substance-use information is among the most sensitive data a person has. Privacy cannot be guaranteed by design alone, so Aftercare 360 treats it as a set of commitments that must be built, assured and independently checked.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="principle"><svg aria-hidden="true"><use href="#i-key"/></svg><div><h3>Person-controlled, granular consent</h3><p>Sharing set by data type, organisation and purpose. Time-limited grants, one-tap withdrawal and a receipt for every change.</p></div></div>
+      <div class="principle"><svg aria-hidden="true"><use href="#i-filter"/></svg><div><h3>Data minimisation and purpose limitation</h3><p>Collect only what a named purpose needs, and use it only for that purpose. Commissioners see aggregated data, not individuals.</p></div></div>
+      <div class="principle"><svg aria-hidden="true"><use href="#i-role"/></svg><div><h3>Role-based access</h3><p>What a practitioner, peer worker or commissioner can see depends on their role and on the person's consent, enforced where data is accessed.</p></div></div>
+      <div class="principle"><svg aria-hidden="true"><use href="#i-audit"/></svg><div><h3>Auditable access and sharing</h3><p>Every view, export and sharing decision is logged. People can read their own access log: who viewed what, and when.</p></div></div>
+      <div class="principle"><svg aria-hidden="true"><use href="#i-lock"/></svg><div><h3>Special-category safeguards</h3><p>A documented UK GDPR Article 9 basis, a data protection impact assessment for each area, data-sharing agreements and UK-region hosting.</p></div></div>
+      <div class="principle"><svg aria-hidden="true"><use href="#i-human"/></svg><div><h3>Human oversight</h3><p>Prompts carry plain-English reasons and lead to human contact. No automated decisions about a person's care or access to services.</p></div></div>
+      <div class="principle"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><h3>Clinical-safety management</h3><p>Clinical risk management to DCB0129 as a supplier, with support for buyers' own DCB0160 obligations.</p></div></div>
+      <div class="principle"><svg aria-hidden="true"><use href="#i-standard"/></svg><div><h3>NHS and public-sector assurance</h3><p>Built to meet the Data Security and Protection Toolkit (DSPT) and the Digital Technology Assessment Criteria (DTAC). These are requirements still to be met.</p></div></div>
+    </div>
+
+    <div class="boundary">
+      <div class="bnd now">
+        <span class="chip planned">Initial concept · Phase 1</span>
+        <h3>Measures and displays. Does not diagnose.</h3>
+        <ul>
+          <li>Measures and displays recovery capital over time.</li>
+          <li>Does not diagnose conditions or predict an individual's clinical risk.</li>
+          <li>Step-down tiers are rules-based and approved by a practitioner.</li>
+          <li>Designed to sit outside medical-device scope in this phase.</li>
+        </ul>
+      </div>
+      <div class="bnd">
+        <span class="chip gated">Conditional · Phase 3</span>
+        <h3>Any predictive capability is gated.</h3>
+        <ul>
+          <li>Only with sufficient consented data from several areas.</li>
+          <li>Validated on areas the model has never seen, with a bias audit.</li>
+          <li>Assessed with the MHRA for software-as-a-medical-device status before release.</li>
+          <li>Requires a clinical-safety case and independent evaluation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="assure">
+      <h3 style="font-size:1.25rem;margin-bottom:6px">Assurance pathway</h3>
+      <p class="muted small" style="margin-bottom:16px">Planned requirements and indicative timing from the start of the build. None of these has been completed yet.</p>
+      <div class="assure-wrap">
+        <table class="as">
+          <thead><tr><th scope="col">Requirement</th><th scope="col">Why it matters</th><th scope="col">Indicative timing</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td>DPIA and data-sharing agreements</td><td>Lawful processing of special-category data under UK GDPR</td><td class="mono small">Months 2 to 6</td><td><span class="chip planned">Planned</span></td></tr>
+            <tr><td>Data Security and Protection Toolkit (DSPT)</td><td>Required to access NHS data and systems</td><td class="mono small">By month 8</td><td><span class="chip planned">Planned</span></td></tr>
+            <tr><td>DCB0129, with support for buyers' DCB0160</td><td>Mandatory clinical-safety standards for health IT</td><td class="mono small">By month 8</td><td><span class="chip planned">Planned</span></td></tr>
+            <tr><td>Cyber Essentials Plus and penetration testing</td><td>Security baseline expected by public buyers</td><td class="mono small">Months 9 to 12</td><td><span class="chip planned">Planned</span></td></tr>
+            <tr><td>Digital Technology Assessment Criteria (DTAC)</td><td>Standard NHS assessment for digital health technologies</td><td class="mono small">By month 12</td><td><span class="chip planned">Planned</span></td></tr>
+            <tr><td>NICE Evidence Standards Framework plan</td><td>Frames the effectiveness and economic evidence buyers expect</td><td class="mono small">By month 12</td><td><span class="chip planned">Planned</span></td></tr>
+            <tr><td>MHRA software-as-a-medical-device review</td><td>Required before any predictive feature is released</td><td class="mono small">Before any Phase 3 release</td><td><span class="chip gated">Gated</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="section" id="roadmap" aria-labelledby="rm-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Development roadmap</div>
+      <h2 id="rm-h">Prove the core in one area before adding anything riskier.</h2>
+      <p class="lede">The build is deliberately sequenced. Each phase has a gate, and higher-risk capabilities wait until the evidence, data volume and clinical-safety work are in place. Nothing below is live today.</p>
+    </div>
+    <div class="phases" role="tablist" aria-label="Roadmap phases" id="phaseTabs"></div>
+    <div class="phase-panel" id="phasePanel" role="tabpanel" tabindex="0" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section class="section alt" id="market" aria-labelledby="mk-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Market and business model</div>
+      <h2 id="mk-h">A defined buyer with a protected budget line.</h2>
+      <p class="lede">In England, local authorities commission drug and alcohol treatment from the Public Health Grant. From April 2026, drug and alcohol funding is consolidated into that grant with a service-specific ring-fence, on a multi-year allocation. That makes local-authority public health the natural first buyer.</p>
+      <p class="muted">Need remains a national priority: 5,565 drug-poisoning deaths were registered in England and Wales in 2024, the highest number on record (<a href="https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/deathsrelatedtodrugpoisoninginenglandandwales/2024registrations" target="_blank" rel="noopener noreferrer">ONS</a>). Sources for the funding position: <a href="https://healthbusinessuk.net/news/11022026/government-publishes-multi-year-public-health-grant-allocation" target="_blank" rel="noopener noreferrer">Health Business, 2026</a>.</p>
+    </div>
+    <div class="market-grid">
+      <div class="sizing">
+        <div class="sizing-top">
+          <span style="font-weight:600;color:var(--ink)">Market sizing, England</span>
+          <div class="seg" role="group" aria-label="Show market as">
+            <button type="button" aria-pressed="true" data-unit="people">People</button>
+            <button type="button" aria-pressed="false" data-unit="value">Annual value</button>
+          </div>
+        </div>
+        <div class="sizing-body">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Nested circles showing TAM, SAM and SOM to scale by area">
+            <circle class="circle" data-layer="tam" cx="100" cy="100" r="96" fill="var(--surface-2)" stroke="var(--line-strong)"/>
+            <circle class="circle" data-layer="sam" cx="100" cy="113" r="82" fill="var(--mint)" stroke="var(--teal)" stroke-opacity=".4"/>
+            <circle class="circle" data-layer="som" cx="100" cy="175" r="18" fill="var(--teal)"/>
+          </svg>
+          <div class="layer-list" id="layers">
+            <button type="button" class="layer" data-layer="tam" aria-pressed="false"><span class="lk">TAM</span><span class="ln">Substance-use treatment population</span><span class="lv tnum" data-p="329,646" data-v="≈ £31.6m">329,646</span></button>
+            <button type="button" class="layer" data-layer="sam" aria-pressed="false"><span class="lk">SAM</span><span class="ln">Co-occurring cohort (approx.)</span><span class="lv tnum" data-p="≈ 244,000" data-v="≈ £23.4m">≈ 244,000</span></button>
+            <button type="button" class="layer" data-layer="som" aria-pressed="true"><span class="lk">SOM</span><span class="ln">Year 3 target</span><span class="lv tnum" data-p="12,000" data-v="≈ £1.15m">12,000</span></button>
+          </div>
+        </div>
+        <p class="basis" id="basis" aria-live="polite"></p>
+        <div class="assume" style="margin-top:0"><svg aria-hidden="true"><use href="#i-alert"/></svg><span>Values use a planning assumption of £96 per active person per year and exclude implementation fees. The SOM is a target, not a forecast of contracted business, and pricing still has to be validated with commissioners.</span></div>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom:6px">How the business is intended to earn</h3>
+        <p class="muted" style="margin-bottom:18px">Commissioner-funded software contracts. Free for the person in recovery, always.</p>
+        <div class="model">
+          <div class="model-row"><h4>Implementation and integration fee</h4><span class="price">£30,000 per area*</span><p>One-off, covering integration with provider and NHS systems, data protection and information-governance support, configuration, training and go-live.</p></div>
+          <div class="model-row"><h4>Annual platform licence</h4><span class="price">£96 per active person*</span><p>Priced per active person rather than per seat, so cost tracks the cohort actually supported. Inactive records are not charged.</p></div>
+          <div class="model-row"><h4>Outcome-linked element</h4><span class="price">Under consideration</span><p>A small, automatic share linked to two or three agreed measures, designed never to become a barrier to access.</p></div>
+          <div class="model-row"><h4>Programme-level licences</h4><span class="price">Future</span><p>Area-wide or ICB-wide agreements as adoption grows, with NHS mental-health services as potential co-buyers. One person, one licence: never charged twice.</p></div>
+          <div class="model-row"><h4>Research access</h4><span class="price">Future, gated</span><p>Cost-recovery access to de-identified data through a trusted research environment, only with consent, ethics and governance in place.</p></div>
+        </div>
+        <p class="src" style="margin-top:12px">* Planning assumptions used to test commercial logic. They are not confirmed prices and must be validated with Birmingham and at least two other commissioners.</p>
+      </div>
+    </div>
+
+    <div class="expand" aria-label="Planned expansion path">
+      <div class="hz"><span class="when">YEARS 1 TO 2</span><h4>Birmingham, then further English local authorities</h4><p>Reference-site evidence, reusable integration connectors and a standard consent model.</p></div>
+      <div class="hz"><span class="when">YEARS 2 TO 3</span><h4>ICBs and NHS mental-health teams as co-buyers</h4><p>One platform serving both sides of the boundary: two budgets, one product.</p></div>
+      <div class="hz"><span class="when">YEARS 3 TO 5</span><h4>Other UK nations and adjacent pathways</h4><p>Such as care after custody and homelessness pathways, on configurable pathways.</p></div>
+      <div class="hz"><span class="when">YEARS 5+</span><h4>International opportunities</h4><p>Markets where recovery capital is already used in commissioning, with IP and engineering kept in the UK.</p></div>
+    </div>
+    <p class="src" style="margin-top:18px">All timings are plans, not current operations. No commissioning contracts are in place yet.</p>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="section" id="founder" aria-labelledby="fd-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">About the founder</div>
+      <h2 id="fd-h">Built from the point where treatment ends.</h2>
+    </div>
+    <div class="founder">
+      <aside class="portrait" aria-label="Founder profile">
+        <img class="founder-img" src="assets/founder.jpg" width="480" height="480" alt="Profile image for Raj Kiran Sanga, founder of Aftercare 360">
+        <div>
+          <div class="f-name">Raj Kiran Sanga</div>
+          <div class="f-role">Founder, Aftercare 360 · Aftercare Practitioner</div>
+        </div>
+        <ul class="f-facts">
+          <li><span>Education</span>MSc Business and Organisational Psychology, Coventry University (2025)</li>
+          <li><span>Earlier study</span>PG Diploma in Psychological Counselling (2017) and BA Psychology (2016), Osmania University</li>
+          <li><span>Certifications</span>CMI Level 7 Certificate in Strategic Management and Leadership Practice (2025); International Certified Addiction Professional, Level 1, Colombo Plan (2019)</li>
+          <li><span>Recognition</span>Course Tutor Prize for Endeavour, Coventry University (2025)</li>
+        </ul>
+      </aside>
+
+      <div class="f-body">
+        <p class="lede" style="font-family:var(--f-display);font-size:clamp(1.25rem,2.1vw,1.5rem);line-height:1.45;color:var(--ink);max-width:none">Raj works in aftercare on the substance-use side of the boundary Aftercare 360 is designed to connect. Day to day, that means supporting people after treatment ends, and seeing how much depends on information reaching the right service at the right time.</p>
+        <p>In that role he builds personalised support plans with people leaving treatment, runs group and one-to-one sessions on recovery maintenance and relapse prevention, and coordinates with housing, employment and mental-health services. It is direct, current exposure to the continuity problem, and to the practitioners and commissioners who would use and buy a solution.</p>
+        <p>Before moving into UK aftercare, Raj spent several years as a psychologist and counsellor in India across hospital, occupational-health, school and prison settings, much of it focused on alcohol and substance use. Aftercare 360 combines that practice experience with a technology-led plan for connecting services at scale.</p>
+
+        <div class="fit">
+          <div><h4>Substance-use services</h4><p>Current aftercare practitioner, after volunteering in recovery support and in a prescribing clinic within UK drug and alcohol treatment services.</p></div>
+          <div><h4>Mental-health services</h4><p>Volunteered on an NHS mental-health in-patient ward and in an NHS trust's administration team, including attending ward rounds.</p></div>
+          <div><h4>Programme design</h4><p>Led the development and delivery of a cognitive behavioural change programme in a district prison, including staff training and evaluation.</p></div>
+        </div>
+
+        <div>
+          <h3 style="margin-bottom:6px">Professional experience</h3>
+          <ol class="timeline">
+            <li class="grp">United Kingdom</li>
+            <li><span class="when">2025 – present</span><div><b>Aftercare Practitioner</b><p>Drug and alcohol treatment service, West Midlands</p></div></li>
+            <li><span class="when">2025</span><div><b>Prescribing Clinic Support Volunteer</b><p>Drug and alcohol treatment service, Coventry</p></div></li>
+            <li><span class="when">2024 – 2025</span><div><b>Ward Volunteer and Admin Volunteer</b><p>NHS mental-health trust, Coventry</p></div></li>
+            <li><span class="when">2024 – 2025</span><div><b>Recovery Support Volunteer</b><p>Drug and alcohol treatment service, Walsall</p></div></li>
+            <li class="grp">India</li>
+            <li><span class="when">2022 – 2023</span><div><b>Counselling Psychologist</b><p>School and community society, Telangana</p></div></li>
+            <li><span class="when">2021 – 2022</span><div><b>Clinical Psychologist, occupational health</b><p>Employee wellness programmes, including substance misuse, Hyderabad</p></div></li>
+            <li><span class="when">2019 – 2021</span><div><b>Consultant Counselling Psychologist</b><p>Neuro speciality hospital, including counselling for alcohol-related issues</p></div></li>
+            <li><span class="when">2017 – 2019</span><div><b>Psychologist</b><p>District prison, Telangana Prisons Department</p></div></li>
+            <li><span class="when">2016 – 2017</span><div><b>Counsellor</b><p>De-addiction and rehabilitation programme for drink-driving offenders and families, Hyderabad</p></div></li>
+          </ol>
+        </div>
+        <p class="disclose">Professional history is summarised from the founder's CV. Employers and organisations are described by type, and their mention does not imply that any of them endorses, funds or partners with Aftercare 360.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVIDENCE -->
+<section class="section alt" id="evidence" aria-labelledby="ev-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Evidence</div>
+      <h2 id="ev-h">What is known, what is assumed, and what is still to prove.</h2>
+      <p class="lede">Aftercare 360 is at an early stage. This section separates published evidence from the venture's own plans so that readers can judge each claim on its basis.</p>
+    </div>
+
+    <div class="status-grid">
+      <div class="status-col">
+        <span class="ev-tag stat">Published evidence</span>
+        <h3>National statistics and research</h3>
+        <ul>
+          <li>Scale of the treatment population and of co-occurring need (OHID).</li>
+          <li>Recovery capital can be measured reliably, including with brief instruments.</li>
+          <li>Drop-out from treatment is common, and transitions are high-risk periods.</li>
+          <li>Ongoing recovery check-ups and peer support have a research base.</li>
+        </ul>
+      </div>
+      <div class="status-col">
+        <span class="ev-tag founder">Founder-reported</span>
+        <h3>From the founder</h3>
+        <ul>
+          <li>Current aftercare role on the substance-use side of the boundary.</li>
+          <li>Professional background, summarised from his CV.</li>
+          <li>A developed business case for the first area.</li>
+          <li>No validation findings of the venture's own have been published yet.</li>
+        </ul>
+      </div>
+      <div class="status-col">
+        <span class="ev-tag assum">Plans and assumptions</span>
+        <h3>Not yet tested</h3>
+        <ul>
+          <li>Product scope, phases and assurance timings.</li>
+          <li>Prices (£96 per active person, £30,000 per area).</li>
+          <li>Market sizing approximations and the Year 3 target.</li>
+          <li>Every interface and figure in the product mock-ups is illustrative.</li>
+        </ul>
+      </div>
+      <div class="status-col">
+        <span class="ev-tag todo">To be demonstrated</span>
+        <h3>Still to show</h3>
+        <ul>
+          <li>Discovery interviews with practitioners, people in recovery and commissioners.</li>
+          <li>Pilot scope and success criteria agreed in writing.</li>
+          <li>DDRCI validity against an established measure (target r ≥ 0.6).</li>
+          <li>Sustained check-ins after discharge (target ≥ 60% weekly completion).</li>
+          <li>Any effect on outcomes, coordination or cost.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact" aria-labelledby="ct-h">
+  <div class="wrap contact">
+    <div class="contact-copy">
+      <div class="eyebrow">Contact and collaboration</div>
+      <h2 id="ct-h">Help build a more connected recovery journey.</h2>
+      <p class="lede">We welcome conversations with commissioners, treatment providers, practitioners and research partners interested in exploring connected recovery infrastructure.</p>
+      <ul class="who">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Commissioners and ICBs</b> exploring pilot scope, outcome measures and procurement routes.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Treatment providers and practitioners</b> willing to share how handovers and aftercare work today.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>University and research teams</b> interested in validating a dynamic recovery-capital measure.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Lived-experience organisations</b> who could help co-design check-ins and consent.</span></li>
+      </ul>
+    </div>
+
+    <form class="cf" id="contactForm" novalidate aria-labelledby="ct-h">
+      <div class="frow">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><span class="err" id="e-name"></span></div>
+        <div class="field"><label for="f-org">Organisation</label><input id="f-org" name="organisation" autocomplete="organization" required aria-describedby="e-org"><span class="err" id="e-org"></span></div>
+      </div>
+      <div class="frow">
+        <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="e-email"><span class="err" id="e-email"></span></div>
+        <div class="field"><label for="f-interest">Area of interest</label>
+          <select id="f-interest" name="interest" required aria-describedby="e-interest">
+            <option value="">Select one</option>
+            <option value="commissioning">Commissioning or ICB partnership</option>
+            <option value="provider">Service-provider collaboration</option>
+            <option value="practitioner">Practitioner insight</option>
+            <option value="research">Research partnership</option>
+            <option value="general">General enquiry</option>
+          </select><span class="err" id="e-interest"></span></div>
+      </div>
+      <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required maxlength="2000" aria-describedby="e-msg h-msg"></textarea><span class="small muted" id="h-msg">Tell us about your organisation and what you would like to explore.</span><span class="err" id="e-msg"></span></div>
+      <div class="warnbox"><svg aria-hidden="true"><use href="#i-info"/></svg><span>Please do not include personal health information, patient details or anyone's recovery history. This form is for professional enquiries only.</span></div>
+      <div class="form-foot">
+        <span class="small muted">Demo form: not yet connected to email. No message is sent or stored.</span>
+        <button class="btn btn-primary" type="submit" id="f-submit">Send enquiry <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+      <div class="result" id="formResult" role="status" hidden tabindex="-1">
+        <h3>Thank you. This is a demo confirmation.</h3>
+        <p>Your enquiry passed validation, but this form is not yet connected to an inbox, so nothing has been sent. Once a confirmed business address or secure form service is configured, enquiries will be delivered there.</p>
+        <button type="button" id="formReset">Start a new enquiry</button>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#home" aria-label="Aftercare 360, back to top">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 16a11 11 0 0 1 11-11" fill="none" stroke="#8FB0DA" stroke-width="3" stroke-linecap="round"/><path d="M27 16a11 11 0 0 1-11 11" fill="none" stroke="#D9B47A" stroke-width="3" stroke-linecap="round"/><path d="M16 5a11 11 0 0 1 11 11M16 27A11 11 0 0 1 5 16" fill="none" stroke="#5CCABE" stroke-width="3" stroke-linecap="round"/><circle cx="16" cy="16" r="3.2" fill="#5CCABE"/></svg>
+          <span>Aftercare<span class="n">360</span></span>
+        </a>
+        <p style="margin-top:12px;max-width:44ch">Connected recovery infrastructure for people with co-occurring mental-health and substance-use needs. An early-stage UK venture in development.</p>
+        <p class="help"><b style="color:#fff">Aftercare 360 is not a support or emergency service.</b> If you need help now, contact your treatment service or GP, or call NHS 111. In an emergency call 999. Samaritans are available any time on 116 123.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#challenge">The Challenge</a></li>
+          <li><a href="#platform">Our Platform</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#innovation">Innovation</a></li>
+          <li><a href="#market">Market and model</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Organisation</h4>
+        <ul>
+          <li><a href="#trust">Trust &amp; Safety</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#founder">About the Founder</a></li>
+          <li><a href="#evidence">Evidence</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© 2026 Aftercare 360. Company registration details to be confirmed.</span>
+      <span>Product interfaces shown are concepts with fictional data.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
